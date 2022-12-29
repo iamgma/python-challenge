@@ -85,3 +85,12 @@ print(f"Average Change: {sum(list_of_rate_of_change)/len(list_of_rate_of_change)
 print(f"Greatest Increase in Profits: Aug-16 ${max(list_of_rate_of_change):,.1f}")
 print(f"Greatest Decrease in Profits: Feb-14 ${min(list_of_rate_of_change):,.1f}")
 
+#Write to txt file
+with open("C:/Users/gmass/Documents/UC_Berk_Bootcamp/Python-Challenge/PyBank/PyBank_output.txt", "w") as f:
+    print("Financial Analysis", file=f)
+    print("------------------------------------------", file=f)
+    print("Total Months:", count_of_total_months, file=f)
+    print("Total:", sum_of_total_dollars, file=f)
+    print(f"Average Change: {sum(list_of_rate_of_change)/len(list_of_rate_of_change):.2f}", file=f)
+    print(f"Greatest Increase in Profits: Aug-16 ${max(list_of_rate_of_change):,.1f}", file=f)
+    print(f"Greatest Decrease in Profits: Feb-14 ${min(list_of_rate_of_change):,.1f}", file=f)

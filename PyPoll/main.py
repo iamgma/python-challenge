@@ -79,7 +79,7 @@ count_of_votes_for_Raymon = len(Raymon_Anthony_Doane_votes)
 
 #To find the percent of votes Diana got
 #Take total_votes and divide by Diana votes
-print('\n')
+print('/n')
 print("Election Results")
 print("-----------------------")
 print(f"Total Votes: {count_of_votes_cast}")
@@ -89,3 +89,15 @@ print(f"Charles Casper Stockham: {count_of_votes_for_Charles/count_of_votes_cast
 print(f"Raymon Anthony Doane: {count_of_votes_for_Raymon/count_of_votes_cast:.1%} ({count_of_votes_for_Raymon})")
 print("-----------------------")
 print("Winner: Diana DeGette")
+
+#Write to txt file
+with open("C:/Users/gmass/Documents/UC_Berk_Bootcamp/Python-Challenge/PyPoll/PyPoll_output.txt", "w") as f:
+    print("Election Results", file=f)
+    print("-----------------------", file=f)
+    print(f"Total Votes: {count_of_votes_cast}", file=f)
+    print("-----------------------", file=f)
+    print(f"Diana DeGette: {count_of_votes_for_Diana/count_of_votes_cast:.1%} ({count_of_votes_for_Diana})", file=f)
+    print(f"Charles Casper Stockham: {count_of_votes_for_Charles/count_of_votes_cast:.1%} ({count_of_votes_for_Charles})", file=f)
+    print(f"Raymon Anthony Doane: {count_of_votes_for_Raymon/count_of_votes_cast:.1%} ({count_of_votes_for_Raymon})", file=f)
+    print("-----------------------", file=f)
+    print("Winner: Diana DeGette", file=f)
